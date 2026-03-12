@@ -60,4 +60,4 @@ jwtchop does not send tokens to any server. All base64url decoding is done with 
 
 ## Support
 
-Contact: https://bitterdesk.com
+Support: https://bitterdesk.com/s/jwtchop/
