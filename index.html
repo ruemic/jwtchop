@@ -732,13 +732,15 @@
   // ── Utilities ──────────────────────────────────────────────────────────────
 
   function b64urlDecode(str) {
-    // base64url → base64 → decode
+    // base64url → base64 → UTF-8 string
     str = str.replace(/-/g, '+').replace(/_/g, '/');
     const pad = str.length % 4;
     if (pad === 2) str += '==';
     else if (pad === 3) str += '=';
     try {
-      return atob(str);
+      // Use TextDecoder to handle UTF-8 correctly (JWTs may contain non-ASCII claims)
+      const bytes = Uint8Array.from(atob(str), c => c.charCodeAt(0));
+      return new TextDecoder().decode(bytes);
     } catch {
       return null;
     }
