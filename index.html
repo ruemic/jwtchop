@@ -642,7 +642,7 @@
     <h2>FAQ</h2>
 
     <div class="faq-item">
-      <div class="faq-q">What is a JWT?</div>
+      <h3 class="faq-q">What is a JWT?</h3>
       <div class="faq-a">
         A JSON Web Token (JWT) is a compact, URL-safe token format defined in RFC 7519. It's used
         to securely transmit claims between parties — most commonly for authentication (proving who
@@ -652,7 +652,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Is it safe to paste my JWT here?</div>
+      <h3 class="faq-q">Is it safe to paste my JWT here?</h3>
       <div class="faq-a">
         Yes. jwtchop runs entirely in your browser — there are no server requests, no analytics
         on token content, and no logging. You can verify this by opening DevTools and watching
@@ -663,7 +663,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Can jwtchop verify the signature?</div>
+      <h3 class="faq-q">Can jwtchop verify the signature?</h3>
       <div class="faq-a">
         No — and that's intentional. Verifying a JWT signature requires the secret signing key
         (for HMAC algorithms like HS256) or the public key (for RSA/ECDSA algorithms like RS256).
@@ -674,7 +674,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What algorithms does jwtchop support?</div>
+      <h3 class="faq-q">What algorithms does jwtchop support?</h3>
       <div class="faq-a">
         jwtchop decodes any JWT regardless of algorithm — HS256, HS384, HS512, RS256, RS384,
         RS512, ES256, ES384, ES512, PS256, PS384, PS512, and none (unsecured JWTs). Since
@@ -684,7 +684,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Why is my token showing as expired?</div>
+      <h3 class="faq-q">Why is my token showing as expired?</h3>
       <div class="faq-a">
         The <code style="color:var(--accent)">exp</code> claim in the payload contains a Unix
         timestamp (seconds since Jan 1, 1970). If that timestamp is in the past relative to your
@@ -694,7 +694,7 @@
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What's the difference between iat and nbf?</div>
+      <h3 class="faq-q">What's the difference between iat and nbf?</h3>
       <div class="faq-a">
         <code style="color:var(--accent)">iat</code> (Issued At) is when the token was created.
         <code style="color:var(--accent)">nbf</code> (Not Before) is when the token becomes valid —
